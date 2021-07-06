@@ -17,6 +17,7 @@ Kaggle Code (for submission)
 - scikit-learn==0.24.1
 - nltk==3.6.2
 - tqdm==4.58.0
+- transformers==4.5.1
 
 # Data setup
 Download the [competition dataset](https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data/data) and place them in `input/orig/`.   
@@ -27,6 +28,7 @@ Run all the cells of `notebook/detect_acronym.ipynb`. This outputs `output/df_la
 Copy and run [govt_dataset_json_to_df](https://www.kaggle.com/mlconsult/100000-govt-datasets-api-json-to-df/). This outputs `datasets.csv`. We renamed this file into `datasets_govt.csv` and placed it in [coleridge-ext](https://www.kaggle.com/osciiart/coleridge-ext) to use it in kaggle code. We also place it in `output/` to use it in the next step.  
 Copy and run [210615_det_acronym_ver2](https://www.kaggle.com/osciiart/210615-det-acronym-ver2/notebook?scriptVersionId=66042722). This outputs `df_acronym3_210615.csv`. Please place this file at `output/`.    
 Run all the cells of `notebook/make_dataset_list.ipynb`. This outputs `output/df_labels_210619_01.csv`. We use this file for NER training in the next step.  
+Run all the cells of `notebook/tokenizer_210613_01.ipynb`. This outputs `output/tokenizer_210613_01.pkl`. We placed this file in [coleridge-ext](https://www.kaggle.com/osciiart/coleridge-ext) to use it in kaggle code.  
 Train NER model using [coleridge_ner](https://github.com/usuyama/coleridge_ner) repository. This outputs a trained NER model in `trained_model/model-best/` directory. We placed this files in [spacy_ner_062020](https://www.kaggle.com/naotous/spacyner062020) to use it in kaggle code.  
 Copy and run [210622_det1_NERu_train_govt](https://www.kaggle.com/osciiart/210622-det1-neru-train-govt?scriptVersionId=66367000). This outputs our final submission 1.  
 Copy and run [210621_train_acronym_ver1](https://www.kaggle.com/osciiart/210621-train-acronym-ver1?scriptVersionId=66241779). This outputs our final submission 2.  
